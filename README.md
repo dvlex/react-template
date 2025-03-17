@@ -52,3 +52,11 @@ export default tseslint.config({
   },
 })
 ```
+## opening as Devcontainer
+### prerequisites
+- vscode
+- docker
+- Dev Containers extension in vscode
+### enter to the devcotainer
+Open this project in vscode, then press ctrl + shift + p, then type "rebuild" to rebuild and reopen container.
+![image](https://github.com/user-attachments/assets/5370db32-7901-412f-ac90-3d5862af5651)
