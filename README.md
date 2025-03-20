@@ -21,60 +21,54 @@ This project uses many tools like:
 
 ### Install
 
-Create the project.
-
-```bash
-pnpm dlx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
-
-Access the project directory.
-
-```bash
-cd my-app
-```
-
 Install dependencies.
 
 ```bash
-pnpm install
+npm install
 ```
 
 Serve with hot reload at <http://localhost:5173>.
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 ### Lint
 
 ```bash
-pnpm run lint
+npm run lint
 ```
 
 ### Typecheck
 
 ```bash
-pnpm run typecheck
+npm run typecheck
 ```
 
 ### Build
 
 ```bash
-pnpm run build
+npm run build
 ```
 
 ### Test
 
 ```bash
-pnpm run test
+npm run test
 ```
 
 View and interact with your tests via UI.
 
 ```bash
-pnpm run test:ui
+npm run test:ui
 ```
 
 ## License
 
 This project is licensed under the MIT License.
+
+## Thanks to the vite template author
+
+Since I adapted this template to a devcontainer, the real author generated this with vite, and is my real hero, here is the link to his page, please star his project:
+
+[joaopaulomoraes](https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate)
