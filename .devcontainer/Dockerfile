@@ -1,9 +1,14 @@
 # Base image
-FROM --platform=linux/amd64 node:18
+FROM --platform=linux/amd64 node:18-alpine
+
+RUN apk update && apk upgrade && \
+    apk add --no-cache \
+    git \
+    curl \
+    zsh
 
 # Install Zsh and Oh My Zsh
-RUN apt-get update && apt-get install -y zsh \
-    && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Install Oh My Zsh plugins
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting \
