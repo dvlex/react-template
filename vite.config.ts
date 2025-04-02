@@ -1,19 +1,17 @@
-/// <reference types="vitest" />
+import path from "path"
+import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config https://vitest.dev/config
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
-  server: {
-    port: 3000,
-    host: '127.0.0.1'
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
-  test: {
-    globals: true,
-    environment: 'happy-dom',
-    setupFiles: '.vitest/setup',
-    include: ['**/test.{ts,tsx}']
-  }
+  server: {
+    host: '127.0.0.1', // Configura el host
+  },
 })
